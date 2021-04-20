@@ -8,3 +8,7 @@
   background-image: url("https://www.transparenttextures.com/patterns/old-map.png");
   position: relative;
 }
+
+.header h2 {
+  align-self: center;
+}
