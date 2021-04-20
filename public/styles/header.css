@@ -1,0 +1,10 @@
+.header {
+  box-sizing: border-box;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #afded7;
+  background-image: url("https://www.transparenttextures.com/patterns/old-map.png");
+  position: relative;
+}
