@@ -18,6 +18,9 @@
     <!-- Font Awesome Toolkit -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
+    <!-- Timeago Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous"></script>
+    
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
@@ -67,15 +70,15 @@
       </section>
 
     <!-- Container for tweets -->
-      <section>
-        <article>
+      <section id="tweet-container">
+        <article class="tweet">
           <header>
             <h5>Avatar & User Name</h5>
             <h5>User Id</h5>
           </header>
           <p>Tweets will populate here</p>
           <footer>
-            <h6>date stamp</h6>
+            <span class="need_to_be_rendered" datetime="2016-07-07T09:24:17Z">July 07, 2016</span>
             <div class="icons">
             <i class="fas fa-flag"></i>
             <i class="fas fa-retweet"></i>
