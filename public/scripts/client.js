@@ -23,6 +23,7 @@ $(document).ready(function() {
     
     $.post("/tweets", $(this).serialize())
     .then(loadTweets);
+    $('#tweet-text').val('');
 
   });
 
@@ -48,12 +49,13 @@ const renderTweets = function(tweets) {
     const newTweet = createTweetElement(tweet);
 
     // takes return value and appends it to the tweets container
-  $('#tweet-container').append(newTweet);
+  $('#tweet-container').prepend(newTweet);
 
   }
 };
 
 const createTweetElement = function(tweet) {
+  let date = timeago.format(tweet.created_at)
   let $tweet = $(`<article class="tweet">
     <header>
       <h5><img src=${tweet.user.avatars}>${tweet.user.name}</h5>
@@ -61,7 +63,7 @@ const createTweetElement = function(tweet) {
     </header>
     <p>${escape(tweet.content.text)}</p>
     <footer>
-      <span class="need_to_be_rendered" datetime="${tweet.created_at}">${tweet.created_at}</span>
+      <span class="need_to_be_rendered">${date}</span>
       <div class="icons">
       <i class="fas fa-flag"></i>
       <i class="fas fa-retweet"></i>
