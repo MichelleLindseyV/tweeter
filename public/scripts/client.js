@@ -59,7 +59,7 @@ const createTweetElement = function(tweet) {
       <h5><img src=${tweet.user.avatars}>${tweet.user.name}</h5>
       <h5>${tweet.user.handle}</h5>
     </header>
-    <p>${tweet.content.text}</p>
+    <p>${escape(tweet.content.text)}</p>
     <footer>
       <span class="need_to_be_rendered" datetime="${tweet.created_at}">${tweet.created_at}</span>
       <div class="icons">
@@ -70,6 +70,12 @@ const createTweetElement = function(tweet) {
     </footer>
   </article>`);
   return $tweet;
+};
+
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 };
 
 
