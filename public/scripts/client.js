@@ -11,10 +11,19 @@ $(document).ready(function() {
 //Posting tweets from form:
   $("form").submit(function (event) {
     event.preventDefault();
+
+    const textValue = $('#tweet-text').val();
+
+    if (textValue == '') {
+      return alert('Text Field is Empty!')
+    }
+    else if (textValue.length > 140) {
+      return alert('Too Many Characters!');
+    }
     
     $.post("/tweets", $(this).serialize())
     .then(loadTweets);
-    
+
   });
 
   //Function to GET data from server
