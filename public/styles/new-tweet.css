@@ -31,3 +31,12 @@ button {
   font-family: 'Bungee', cursive;
 }
 
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    float: right;
+    width: 55%;
+    margin: 14% 5% 10% 0;
+  }
+}
+
