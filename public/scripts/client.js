@@ -8,18 +8,28 @@
 
 $(document).ready(function() {
 
+  $( ".error" ).hide();
+
 //Posting tweets from form:
   $("form").submit(function (event) {
     event.preventDefault();
 
+    
+
     const textValue = $('#tweet-text').val();
 
     if (textValue == '') {
-      return alert('Text Field is Empty!')
-    }
-    else if (textValue.length > 140) {
-      return alert('Too Many Characters!');
-    }
+      $( ".error" ).show( 400, function() {
+        $( this ).text( "Oops! Text area is empty: Please enter your message!")
+    });
+  } else if (textValue.length > 140) {
+    $( ".error" ).show( 400, function() {
+      $( this ).text( "Oops! Too many charaters: Max word count is 140!")
+    });
+  } else {
+    $( ".error" ).hide();
+  };
+
     
     $.post("/tweets", $(this).serialize())
     .then(loadTweets);

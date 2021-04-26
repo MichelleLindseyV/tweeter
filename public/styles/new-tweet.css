@@ -2,9 +2,19 @@
   display: flex;
 }
 
+.error {
+  width: 50%;
+  color: red;
+  border: 3px solid red;
+  margin-bottom: 3%;
+  text-align: center;
+}
+
+
 textarea {
   width: 100%;
   border: none;
+  outline: none;
   background-color: #f4f1ec;
   border-bottom: 4px solid grey;
 }
@@ -14,7 +24,7 @@ button {
   background-color: #EE8C00;
   color: #FFFFFF;
   border: none;
-  margin-right: 90%
+  margin-right: 91%
 }
 
 .counter {

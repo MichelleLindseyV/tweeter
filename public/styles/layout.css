@@ -26,30 +26,38 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 1.5em 0 1.5em;
-  height: 100px;
+  height: 120px;
   width : 100%;
   color: #FFFFFF;
   background-color: #090438;
-  position: absolute;
-  z-index: 10;
-}
-
-.navigation.right {
-  display: flex;
-  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .title {
   font-family: 'Bungee', cursive;
   color: #FFFFFF;
+  font-size: 30px;
+}
+
+.right {
+  text-align: center;
+}
+
+.right p {
+  margin-bottom: 5px;
 }
 
 .container {
   display: flex;
   flex-direction:column;
   justify-content: center;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin: 5% 5% 0 5%;
+}
+
+.fa-angle-double-down {
+  color: #EE8C00;
 }
 
 /*

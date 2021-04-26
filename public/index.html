@@ -41,7 +41,7 @@
     <nav class="navigation">
       <div class="title"><span>tweeter</span></div>
       <div class="right">
-      <h5>Write a new tweet!</h5>
+      <p><b>Write</b> a new tweet!</p>
       <i class="fas fa-angle-double-down"></i>
     </div>
       </nav>
@@ -52,18 +52,19 @@
         <img src="/images/profile-hex.png">
       </div>
       <div>
-        <h2>Michelle Verge</h2>
+        <p><b>Michelle</b> Verge</p>
       </div>
     </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div class="error"></div>
         <form action="/tweets" method="POST">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div>
-            <button type="submit">Tweet</button>
+            <button class="tweet-submit" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
@@ -71,21 +72,21 @@
 
     <!-- Container for tweets -->
       <section id="tweet-container">
-        <article class="tweet">
+        <!-- <article class="tweet">
           <header>
-            <h5>Avatar & User Name</h5>
-            <h5>User Id</h5>
+            <h5></h5>
+            <h5></h5>
           </header>
-          <p>Tweets will populate here</p>
+          <p></p>
           <footer>
-            <span class="need_to_be_rendered" datetime="2016-07-07T09:24:17Z">July 07, 2016</span>
+            <span class="need_to_be_rendered"></span>
             <div class="icons">
             <i class="fas fa-flag"></i>
             <i class="fas fa-retweet"></i>
             <i class="fas fa-heart"></i>
           </div>
           </footer>
-        </article>
+        </article> -->
       </section>
   </main>
   </body>

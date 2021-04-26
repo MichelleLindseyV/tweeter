@@ -5,6 +5,10 @@ article {
   margin: 5% 0 5% 0;
 }
 
+article:hover {
+  box-shadow: 10px 10px 5px #BADAD3; 
+}
+
 article header {
   display: flex;
   justify-content: space-between;
@@ -14,11 +18,23 @@ article header {
 article p {
   display: flex;
   border-bottom: 2px solid black;
-  margin: 2%;
+  margin: 0 2% 2% 2%;
 }
 
 article footer{
   display: flex;
   justify-content: space-between;
-  margin: 0 2% 0 2%;
+  margin: 0 2% 2% 2%;
+}
+
+.fa-flag:hover {
+  color:#D9A9AD;
+}
+
+.fa-retweet:hover {
+  color:#D9A9AD;
+}
+
+.fa-heart:hover {
+  color:#D9A9AD;
 }
