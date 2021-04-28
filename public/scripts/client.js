@@ -27,12 +27,12 @@ const textValue = $('#tweet-text').val();
       $( this ).text( "Oops! Too many charaters: Max word count is 140!")
     });
   } else if (textValue.length <=140) { 
+    $( ".error" ).hide();{
     $.post("/tweets", $(this).serialize())
     .then(loadTweets);
     $('#tweet-text').val('');
-  } else {
-    $( ".error" ).hide();
-  };
+    }
+  }
 });
 
   //Function to GET data from server
