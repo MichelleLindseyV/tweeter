@@ -33,7 +33,6 @@ const textValue = $('#tweet-text').val();
   } else {
     $( ".error" ).hide();
   };
-
 });
 
   //Function to GET data from server
