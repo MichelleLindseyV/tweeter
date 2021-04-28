@@ -16,26 +16,25 @@ $(document).ready(function() {
 
     
 
-    const textValue = $('#tweet-text').val();
+const textValue = $('#tweet-text').val();
 
-    if (textValue == '') {
-      $( ".error" ).show( 400, function() {
-        $( this ).text( "Oops! Text area is empty: Please enter your message!")
+  if (textValue == '') {
+    $( ".error" ).show( 400, function() {
+      $( this ).text( "Oops! Text area is empty: Please enter your message!")
     });
   } else if (textValue.length > 140) {
     $( ".error" ).show( 400, function() {
       $( this ).text( "Oops! Too many charaters: Max word count is 140!")
     });
+  } else if (textValue.length <=140) { 
+    $.post("/tweets", $(this).serialize())
+    .then(loadTweets);
+    $('#tweet-text').val('');
   } else {
     $( ".error" ).hide();
   };
 
-    
-    $.post("/tweets", $(this).serialize())
-    .then(loadTweets);
-    $('#tweet-text').val('');
-
-  });
+});
 
   //Function to GET data from server
   const loadTweets = function() {
