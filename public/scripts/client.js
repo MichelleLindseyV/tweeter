@@ -6,6 +6,8 @@
 
 
 
+
+
 $(document).ready(function() {
 
   $( ".error" ).hide();
@@ -27,10 +29,12 @@ const textValue = $('#tweet-text').val();
       $( this ).text( "Oops! Too many charaters: Max word count is 140!")
     });
   } else if (textValue.length <=140) { 
-    $( ".error" ).hide();{
+    $( ".error" ).hide(); {
     $.post("/tweets", $(this).serialize())
-    .then(loadTweets);
+    .then(loadLastTweet)
+    .catch(err => console.log(err));
     $('#tweet-text').val('');
+    $('.counter').val('140');
     }
   }
 });
@@ -44,6 +48,16 @@ const textValue = $('#tweet-text').val();
   };
 
   loadTweets();
+
+
+  const loadLastTweet = function() {
+    let tweetArr = [];
+    return $.get('/tweets')
+    .then(function (newTweet) {
+      tweetArr.push(newTweet [newTweet.length - 1])
+      renderTweets(tweetArr)
+    })
+  };
 
 
 
